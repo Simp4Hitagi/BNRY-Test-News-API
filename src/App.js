@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 // import React, { useState } from 'react';
-import { Navbar, Nav, Form, Button, Container } from 'react-bootstrap';
+import { Navbar, Nav, Form, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Link } from "react-router-dom";
 // import NavbarComp, { search } from './components/NavbarComponent';
 
 
@@ -28,16 +29,15 @@ function App() {
     <div className="App">
       <Navbar bg="light" expand="lg" sticky="top" scrolling>
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#"><img src="" alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Articles</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="./pages/Articles.jsx">Articles</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control type="search" onChange={(event) => setSearch(event.target.value)} placeholder="Search" className="me-2" aria-label="Search" />
-            <Button variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
